@@ -4,11 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 <title>Meu portfólio</title>
-</link></head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/></head>
 <body><a class="skip-link" href="#conteudo-principal" id="pular-conteudo">Pular para o conteúdo principal</a>
 <!-- Menu de Acessibilidade -->
 <div class="menu-acessibilidade" id="acessibilidade">
@@ -21,7 +19,7 @@
 <button aria-label="Alternar alto contraste" class="btn btn-primary fw-bold" id="alterna-contraste" type="button"><i aria-hidden="true" class="bi bi-shadows"></i></button>
 </div>
 </div>
-<header aria-label="Cabeçalho com apresentação de José Antonio Godoy" class="container text-center" tabindex="0">
+<header aria-label="Cabeçalho com apresentação de José Antonio Godoy" class="container text-center" id="inicio" tabindex="0">
 <h1>Bem Vindo ao meu Portfólio</h1>
 <img alt="José homem branco de cabelos azuis" src="img/Eu.JPG" srcset="" width="200"/>
 <p class="lead">Sou José Antonio Godoy</p>
@@ -35,14 +33,13 @@
 <p class="badge bg-secondary">Programação</p>
 </div>
 </header>
-<script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <main class="container" id="conteudo-principal"></main>
 <h2 aria-label="Seção de componentes curriculares" tabindex="0">Componentes Curriculares</h2>
 <div aria-label="Galeria de cards com formações e fotos" class="row" tabindex="0">
-<div class="container text-center mt-4">
+<div class="container text-center mt-4" id="galeria">
 <div class="row g-3">
 <div class="col-12 col-md-4">
-<div aria-label="Card de formação: Robótica" class="card" tabindex="0">
+<div aria-label="Card de formação: Robótica" class="card reveal-card" tabindex="0">
 <img alt="Imagem ilustrativa da formação de Robótica" class="card-img-top" src="img/Formação Robotica 4.png"/>
 <div class="card-body">
 <h5 class="card-title">Robótica</h5>
@@ -53,7 +50,7 @@
 </div>
 </div>
 <div class="col-12 col-md-4">
-<div aria-label="Card de formação: Tecnologia &amp; Inovação" class="card" tabindex="0">
+<div aria-label="Card de formação: Tecnologia &amp; Inovação" class="card reveal-card" tabindex="0">
 <img alt="Imagem ilustrativa da formação de Tecnologia &amp; Inovação" class="card-img-top" src="img/Formação Alura5.jpeg"/>
 <div class="card-body">
 <h5 class="card-title">Tecnologia &amp; Inovação</h5>
@@ -64,7 +61,7 @@
 </div>
 </div>
 <div class="col-12 col-md-4">
-<div aria-label="Card de formação: Programação" class="card" tabindex="0">
+<div aria-label="Card de formação: Programação" class="card reveal-card" tabindex="0">
 <img alt="Imagem ilustrativa da formação de Programação" class="card-img-top" src="img/Formação Alura2.jpeg"/>
 <div class="card-body">
 <h5 class="card-title">Programação</h5>
@@ -193,6 +190,6 @@
 </div>
 <p class="my-5 text-center">© Copyright 2024. Produzido por José Antonio Godoy</p>
 </footer>
-<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script><script src="script.js"></script>
 </div></body>
 </html>

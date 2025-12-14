@@ -116,3 +116,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// ===== Aula 09: Animações com ScrollReveal (aprimorado) =====
+// Respeita preferências de acessibilidade (reduzir movimento)
+(function () {
+  const reduzMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduzMovimento || typeof ScrollReveal === 'undefined') return;
+
+  // Seções principais
+  ScrollReveal().reveal('#inicio', { delay: 200 });
+  ScrollReveal().reveal('#galeria', { delay: 250 });
+  ScrollReveal().reveal('#contato', { delay: 250 });
+
+  // Cards em cascata (específico do seu portfólio)
+  ScrollReveal().reveal('.reveal-card', {
+    interval: 120,
+    delay: 200
+  });
+})();
+
