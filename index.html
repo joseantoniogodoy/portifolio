@@ -10,6 +10,18 @@
   </head>
 
   <body>
+
+  <!-- Acessibilidade -->
+  <div id="acessibilidade" class="menu-acessibilidade">
+    <button id="botao-acessibilidade" class="btn btn-primary fw-bold" aria-expanded="false" aria-controls="opcoes-acessibilidade">
+      Acessibilidade
+    </button>
+    <div id="opcoes-acessibilidade" class="opcoes-acessibilidade" hidden>
+      <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar fonte">A+</button>
+      <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir fonte">A-</button>
+    </div>
+  </div>
+
     <header class="container text-center">
      <h1>Bem Vindo ao meu Portfólio</h1>    
      <img src="img/Eu.JPG" width="200"alt="José homem branco de cabelos azuis" srcset="" />
@@ -222,5 +234,6 @@
   </div>
    <p class="my-5 text-center">© Copyright 2024. Produzido por José Antonio Godoy</p>
 </footer>
+    <script src="script.js"></script>
   </body>
 </html>
