@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const diminuiFonteBotao = document.getElementById('diminuir-fonte');
 
   
-  const alternaContraste = document.getElementById(\'alterna-contraste\');
+  const alternaContraste = document.getElementById('alterna-contraste');
 const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
   const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
   const containerAcessibilidade = document.getElementById('acessibilidade');
