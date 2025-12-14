@@ -1,247 +1,198 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-    <title>Meu portfólio</title>
-  </head>
 
-  <body>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<title>Meu portfólio</title>
+</link></head>
+<body><a class="skip-link" href="#conteudo-principal" id="pular-conteudo">Pular para o conteúdo principal</a>
 <!-- Menu de Acessibilidade -->
-<div id="acessibilidade" class="menu-acessibilidade">
-  <button
-    id="botao-acessibilidade"
-    class="btn btn-primary fw-bold rotacao-botao"
-    aria-expanded="false"
-    aria-controls="opcoes-acessibilidade"
-    aria-label="Abrir opções de acessibilidade"
-    type="button"
-  >
+<div class="menu-acessibilidade" id="acessibilidade">
+<button aria-controls="opcoes-acessibilidade" aria-expanded="false" aria-label="Abrir opções de acessibilidade" class="btn btn-primary fw-bold rotacao-botao" id="botao-acessibilidade" type="button">
     acessibilidade
   </button>
-
-  <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista" role="group" aria-label="Opções de acessibilidade">
-    <button id="aumentar-fonte" class="btn btn-primary fw-bold" type="button" aria-label="Aumentar fonte">A+</button>
-    <button id="diminuir-fonte" class="btn btn-primary fw-bold" type="button" aria-label="Diminuir fonte">A-</button>
-    <button id="alterna-contraste" class="btn btn-primary fw-bold" type="button" aria-label="Alternar alto contraste"><i class="bi bi-shadows" aria-hidden="true"></i></button>
-  </div>
+<div aria-label="Opções de acessibilidade" class="opcoes-acessibilidade apresenta-lista" id="opcoes-acessibilidade" role="group">
+<button aria-label="aumentar o tamanho da fonte" class="btn btn-primary fw-bold" id="aumentar-fonte" type="button">A+</button>
+<button aria-label="diminuir o tamanho da fonte" class="btn btn-primary fw-bold" id="diminuir-fonte" type="button">A-</button>
+<button aria-label="Alternar alto contraste" class="btn btn-primary fw-bold" id="alterna-contraste" type="button"><i aria-hidden="true" class="bi bi-shadows"></i></button>
 </div>
-
-    <header class="container text-center">
-     <h1>Bem Vindo ao meu Portfólio</h1>    
-     <img src="img/Eu.JPG" width="200"alt="José homem branco de cabelos azuis" srcset="" />
-     <p class=" lead">Sou José Antonio Godoy</p>
-     <h1>PEC Desenvolvimento Curricular de Tecnologia da Ure de Adamantina.</h1>
-     <p>Atuo na formação dos professores di alguns componentes curriculares, também acompanho o 
+</div>
+<header aria-label="Cabeçalho com apresentação de José Antonio Godoy" class="container text-center" tabindex="0">
+<h1>Bem Vindo ao meu Portfólio</h1>
+<img alt="José homem branco de cabelos azuis" src="img/Eu.JPG" srcset="" width="200"/>
+<p class="lead">Sou José Antonio Godoy</p>
+<h1>PEC Desenvolvimento Curricular de Tecnologia da Ure de Adamantina.</h1>
+<p>Atuo na formação dos professores di alguns componentes curriculares, também acompanho o 
     desenvolvimento do currículo desses componentes nas 33 escolas da nossa Unidade Regional de Ensino.</p>
-     <p>Componentes Curriculares</p>
-    <div>
-        <p class="badge bg-secondary">Robótica</p>
-        <p class="badge bg-secondary">Tecnologia & Inovação</p>
-        <p class="badge bg-secondary">Programação</p>
-    </div>
-   </header> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
-    ></script>
-    <main class="container"></main>
-    <h2>Componentes Curriculares</h2>
-    <div class="row">
+<p>Componentes Curriculares</p>
+<div>
+<p class="badge bg-secondary">Robótica</p>
+<p class="badge bg-secondary">Tecnologia &amp; Inovação</p>
+<p class="badge bg-secondary">Programação</p>
+</div>
+</header>
+<script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<main class="container" id="conteudo-principal"></main>
+<h2 aria-label="Seção de componentes curriculares" tabindex="0">Componentes Curriculares</h2>
+<div aria-label="Galeria de cards com formações e fotos" class="row" tabindex="0">
 <div class="container text-center mt-4">
-  <div class="row g-3">
-    
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <img src="img/Formação Robotica 4.png" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Robótica</h5>
-          <p class="card-text">Veja aqui algumas fotos das formações de Robótica que ministrei no ano de 2025..</p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFormacaoRobotica">Veja mais fotos
+<div class="row g-3">
+<div class="col-12 col-md-4">
+<div aria-label="Card de formação: Robótica" class="card" tabindex="0">
+<img alt="Imagem ilustrativa da formação de Robótica" class="card-img-top" src="img/Formação Robotica 4.png"/>
+<div class="card-body">
+<h5 class="card-title">Robótica</h5>
+<p class="card-text">Veja aqui algumas fotos das formações de Robótica que ministrei no ano de 2025..</p>
+<button aria-label="Ver mais fotos da formação de Robótica" class="btn btn-primary" data-bs-target="#modalFormacaoRobotica" data-bs-toggle="modal" type="button">Veja mais fotos
           </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <img src="img/Formação Alura5.jpeg" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Tecnologia & Inovação</h5>
-          <p class="card-text">Veja aqui algumas fotos das formações de Tecnologia & Inovação que ministrei no ano de 2025.</p>
-         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFormacaoTecnologia">Veja mais fotos
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div aria-label="Card de formação: Tecnologia &amp; Inovação" class="card" tabindex="0">
+<img alt="Imagem ilustrativa da formação de Tecnologia &amp; Inovação" class="card-img-top" src="img/Formação Alura5.jpeg"/>
+<div class="card-body">
+<h5 class="card-title">Tecnologia &amp; Inovação</h5>
+<p class="card-text">Veja aqui algumas fotos das formações de Tecnologia &amp; Inovação que ministrei no ano de 2025.</p>
+<button aria-label="Ver mais fotos da formação de Tecnologia &amp; Inovação" class="btn btn-primary" data-bs-target="#modalFormacaoTecnologia" data-bs-toggle="modal" type="button">Veja mais fotos
           </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <img src="img/Formação Alura2.jpeg" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Programação</h5>
-          <p class="card-text"> Veja aqui algumas fotos das formações de Programação que ministrei no ano de 2025.</p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFormacaoProgramacao">Veja mais fotos
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div aria-label="Card de formação: Programação" class="card" tabindex="0">
+<img alt="Imagem ilustrativa da formação de Programação" class="card-img-top" src="img/Formação Alura2.jpeg"/>
+<div class="card-body">
+<h5 class="card-title">Programação</h5>
+<p class="card-text"> Veja aqui algumas fotos das formações de Programação que ministrei no ano de 2025.</p>
+<button aria-label="Ver mais fotos da formação de Programação" class="btn btn-primary" data-bs-target="#modalFormacaoProgramacao" data-bs-toggle="modal" type="button">Veja mais fotos
           </button>
-      </div>
-    </div>
-
-  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-  </div>
-</main>
-<<!-- Modal Formações Robótica -->
-<div class="modal fade" id="modalFormacaoRobotica" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Formações de Robótica</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-
-      <div class="modal-body">
-        <!-- Carousel -->
-        <div id="carouselFormacaoRobotica" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-
-            <!-- Imagem 1 -->
-            <div class="carousel-item active">
-              <img src="img/Formação Robotica 1.jpeg" class="d-block w-100" alt="Formação Robótica 1">
-            </div>
-
-            <!-- Imagem 2 -->
-            <div class="carousel-item">
-              <img src="img/Formação Robotica 2.jpeg" class="d-block w-100" alt="Formação Robótica 2">
-            </div>
-
-            <!-- Imagem 3 -->
-            <div class="carousel-item">
-              <img src="img/Formação Robotica 3.jpeg" class="d-block w-100" alt="Formação Robótica 3">
-            </div>
-
-            <!-- Adicione quantas imagens quiser repetindo o bloco .carousel-item -->
-
-          </div>
-
-          <!-- Botão anterior -->
-          <button class="carousel-control-prev" type="button"
-                  data-bs-target="#carouselFormacaoRobotica" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-
-          <!-- Botão próximo -->
-          <button class="carousel-control-next" type="button"
-                  data-bs-target="#carouselFormacaoRobotica" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-          </button>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
+&lt;<!-- Modal Formações Robótica -->
+<div aria-hidden="true" aria-label="Janela com fotos: Formação Robotica" class="modal fade" id="modalFormacaoRobotica" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Formações de Robótica</h5>
+<button aria-label="Fechar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<!-- Carousel -->
+<div class="carousel slide" data-bs-ride="carousel" id="carouselFormacaoRobotica">
+<div class="carousel-inner">
+<!-- Imagem 1 -->
+<div class="carousel-item active">
+<img alt="Formação Robótica 1" class="d-block w-100" src="img/Formação Robotica 1.jpeg"/>
+</div>
+<!-- Imagem 2 -->
+<div class="carousel-item">
+<img alt="Formação Robótica 2" class="d-block w-100" src="img/Formação Robotica 2.jpeg"/>
+</div>
+<!-- Imagem 3 -->
+<div class="carousel-item">
+<img alt="Formação Robótica 3" class="d-block w-100" src="img/Formação Robotica 3.jpeg"/>
+</div>
+<!-- Adicione quantas imagens quiser repetindo o bloco .carousel-item -->
+</div>
+<!-- Botão anterior -->
+<button aria-label="Imagem anterior" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselFormacaoRobotica" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+<span class="visually-hidden">Anterior</span>
+</button>
+<!-- Botão próximo -->
+<button aria-label="Próxima imagem" class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselFormacaoRobotica" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+<span class="visually-hidden">Próximo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
 </div>
 <!-- Modal Formações Tecnologia & Inovação -->
-<div class="modal fade" id="modalFormacaoTecnologia" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Formações de Tecnologia & Inovação</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-
-      <div class="modal-body">
-        <div id="carouselFormacaoTecnologia" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-
-            <div class="carousel-item active">
-              <img src="img/Formação Alura1.jpeg" class="d-block w-100" alt="Formação de Tecnologia 1">
-            </div>
-            <div class="carousel-item">
-              <img src="img/Formação Alura2.jpeg" class="d-block w-100" alt="Formação de Tecnologia 2">
-            </div>
-            <div class="carousel-item">
-              <img src="img/Formação Alura3.jpeg" class="d-block w-100" alt="Formação de Tecnologia 3">
-            </div>
-
-          </div>
-
-          <button class="carousel-control-prev" type="button"
-                  data-bs-target="#carouselFormacaoTecnologia" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-
-          <button class="carousel-control-next" type="button"
-                  data-bs-target="#carouselFormacaoTecnologia" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-          </button>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
+<div aria-hidden="true" aria-label="Janela com fotos: Formação Tecnologia" class="modal fade" id="modalFormacaoTecnologia" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Formações de Tecnologia &amp; Inovação</h5>
+<button aria-label="Fechar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="carousel slide" data-bs-ride="carousel" id="carouselFormacaoTecnologia">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img alt="Formação de Tecnologia 1" class="d-block w-100" src="img/Formação Alura1.jpeg"/>
+</div>
+<div class="carousel-item">
+<img alt="Formação de Tecnologia 2" class="d-block w-100" src="img/Formação Alura2.jpeg"/>
+</div>
+<div class="carousel-item">
+<img alt="Formação de Tecnologia 3" class="d-block w-100" src="img/Formação Alura3.jpeg"/>
+</div>
+</div>
+<button aria-label="Imagem anterior" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselFormacaoTecnologia" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+<span class="visually-hidden">Anterior</span>
+</button>
+<button aria-label="Próxima imagem" class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselFormacaoTecnologia" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+<span class="visually-hidden">Próximo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
 </div>
 <!-- Modal Formações Programação -->
-<div class="modal fade" id="modalFormacaoProgramacao" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Formações de Programação</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-
-      <div class="modal-body">
-        <div id="carouselFormacaoProgramacao" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-
-            <div class="carousel-item active">
-              <img src="img/Formação Alura4.jpeg" class="d-block w-100" alt="Formação de Programação 1">
-            </div>
-            <div class="carousel-item">
-              <img src="img/Formação Alura5.jpeg" class="d-block w-100" alt="Formação de Programação 2">
-            </div>
-            <div class="carousel-item">
-              <img src="img/Formação Alura1.jpeg" class="d-block w-100" alt="Formação de Programação 3">
-            </div>
-
-          </div>
-
-          <button class="carousel-control-prev" type="button"
-                  data-bs-target="#carouselFormacaoProgramacao" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-
-          <button class="carousel-control-next" type="button"
-                  data-bs-target="#carouselFormacaoProgramacao" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-          </button>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
+<div aria-hidden="true" aria-label="Janela com fotos: Formação Programacao" class="modal fade" id="modalFormacaoProgramacao" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Formações de Programação</h5>
+<button aria-label="Fechar" class="btn-close" data-bs-dismiss="modal" type="button"></button>
 </div>
-
-<footer class="container" class= "meu-footer" py-5>
-  <h2>Entre em contato</h2>
-  <div>
-   <img src="img/assinatura.png" width= "600" alt="contato profissional de José Antonio Godoy">
-  </div>
-   <p class="my-5 text-center">© Copyright 2024. Produzido por José Antonio Godoy</p>
+<div class="modal-body">
+<div class="carousel slide" data-bs-ride="carousel" id="carouselFormacaoProgramacao">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img alt="Formação de Programação 1" class="d-block w-100" src="img/Formação Alura4.jpeg"/>
+</div>
+<div class="carousel-item">
+<img alt="Formação de Programação 2" class="d-block w-100" src="img/Formação Alura5.jpeg"/>
+</div>
+<div class="carousel-item">
+<img alt="Formação de Programação 3" class="d-block w-100" src="img/Formação Alura1.jpeg"/>
+</div>
+</div>
+<button aria-label="Imagem anterior" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselFormacaoProgramacao" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+<span class="visually-hidden">Anterior</span>
+</button>
+<button aria-label="Próxima imagem" class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselFormacaoProgramacao" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+<span class="visually-hidden">Próximo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer aria-label="Rodapé com informações de contato" class="meu-footer" id="rodape" py-5="" tabindex="0">
+<h2>Entre em contato</h2>
+<div>
+<img alt="contato profissional de José Antonio Godoy" src="img/assinatura.png" width="600"/>
+</div>
+<p class="my-5 text-center">© Copyright 2024. Produzido por José Antonio Godoy</p>
 </footer>
-    <script src="script.js"></script>
-</body>
+<script src="script.js"></script>
+</div></body>
 </html>

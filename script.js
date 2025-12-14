@@ -38,11 +38,14 @@ const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
     if (ativoSalvo === 'true') {
       document.body.classList.add('alto-contraste');
     }
+    alternaContraste.setAttribute('aria-pressed', String(document.body.classList.contains('alto-contraste')));
     alternaContraste.addEventListener('click', function (e) {
       e.stopPropagation();
       document.body.classList.toggle('alto-contraste');
       localStorage.setItem(CONTRASTE_KEY, String(document.body.classList.contains('alto-contraste')));
-    });
+    
+      alternaContraste.setAttribute('aria-pressed', String(document.body.classList.contains('alto-contraste')));
+});
   }
 
 
@@ -75,6 +78,9 @@ const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
   botaoDeAcessibilidade.addEventListener('click', function (e) {
     e.stopPropagation();
     abrirFecharMenu();
+    const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+    botaoDeAcessibilidade.setAttribute('aria-expanded', String(!botaoSelecionado));
+
   });
 
   // Melhoria: fechar ao clicar fora
@@ -89,5 +95,24 @@ const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
     if (e.key === 'Escape') {
       fecharMenu();
     }
+  });
+});
+
+// ===== Melhoria: ao fechar modal, retornar o foco ao botão que abriu =====
+document.addEventListener('DOMContentLoaded', function () {
+  let ultimoGatilhoModal = null;
+
+  document.querySelectorAll('[data-bs-toggle="modal"]').forEach((btn) => {
+    btn.addEventListener('click', function () {
+      ultimoGatilhoModal = btn;
+    });
+  });
+
+  document.querySelectorAll('.modal').forEach((modal) => {
+    modal.addEventListener('hidden.bs.modal', function () {
+      if (ultimoGatilhoModal) {
+        ultimoGatilhoModal.focus();
+      }
+    });
   });
 });
