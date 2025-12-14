@@ -19,23 +19,36 @@ meu-footer a {
   padding: 20px;;
 }
 
-/* Acessibilidade: menu fixo e botões */
+/* ===== Menu de Acessibilidade (Aula 05 + melhorias) ===== */
 .menu-acessibilidade{
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
+  top: 2rem;
+  right: 20px;
+  z-index: 1000;
+}
+
+.rotacao-botao{
+  transform: rotate(-90deg);
+  transform-origin: right center;
 }
 
 .opcoes-acessibilidade{
+  margin-top: 10px;
   display: flex;
-  gap: .5rem;
+  flex-direction: column;
 }
 
+.opcoes-acessibilidade button{
+  margin-bottom: 5px;
+}
+
+/* Esconde/mostra a lista */
+.apresenta-lista{
+  display: none;
+}
+
+/* Melhoria: alvo de toque confortável (recomendação comum em acessibilidade) */
 .menu-acessibilidade button{
-  min-width: 44px; /* alvo de toque confortável */
+  min-width: 44px;
   min-height: 44px;
 }

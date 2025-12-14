@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const container = document.getElementById('acessibilidade');
-  const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
-  const opcoes = document.getElementById('opcoes-acessibilidade');
-
   const aumentaFonteBotao = document.getElementById('aumentar-fonte');
-  const diminuirFonteBotao = document.getElementById('diminuir-fonte');
+  const diminuiFonteBotao = document.getElementById('diminuir-fonte');
 
-  // Fonte (rem): leitura inicial + limites
+  const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
+  const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
+  const containerAcessibilidade = document.getElementById('acessibilidade');
+
+  // ===== Fonte (melhoria): limites + persistência =====
+  const STEP = 0.1;
   const MIN = 0.8;
   const MAX = 1.6;
-  const STEP = 0.1;
 
   let tamanhoAtualFonte = Number(localStorage.getItem('tamanhoFonte')) || 1;
   tamanhoAtualFonte = Math.min(MAX, Math.max(MIN, tamanhoAtualFonte));
@@ -19,43 +19,59 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('tamanhoFonte', String(tamanhoAtualFonte));
   }
 
-  function abrirFechar() {
-    const aberto = botaoAcessibilidade.getAttribute('aria-expanded') === 'true';
-    const novoEstado = !aberto;
-
-    botaoAcessibilidade.setAttribute('aria-expanded', String(novoEstado));
-    opcoes.hidden = !novoEstado;
-  }
-
-  // Toggle do menu
-  botaoAcessibilidade.addEventListener('click', abrirFechar);
-
-  // Controles de fonte
   aumentaFonteBotao.addEventListener('click', function () {
     tamanhoAtualFonte = Math.min(MAX, +(tamanhoAtualFonte + STEP).toFixed(2));
     document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
     salvarFonte();
   });
 
-  diminuirFonteBotao.addEventListener('click', function () {
+  diminuiFonteBotao.addEventListener('click', function () {
     tamanhoAtualFonte = Math.max(MIN, +(tamanhoAtualFonte - STEP).toFixed(2));
     document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
     salvarFonte();
   });
 
-  // Fechar ao clicar fora (opcional, melhora usabilidade)
+  // ===== Menu (Aula 05): toggle de classes + aria-expanded =====
+  function abrirFecharMenu() {
+    botaoDeAcessibilidade.classList.toggle('rotacao-botao');
+    opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
+
+    const aberto = !opcoesDeAcessibilidade.classList.contains('apresenta-lista');
+    botaoDeAcessibilidade.setAttribute('aria-expanded', String(aberto));
+    botaoDeAcessibilidade.setAttribute(
+      'aria-label',
+      aberto ? 'Fechar opções de acessibilidade' : 'Abrir opções de acessibilidade'
+    );
+  }
+
+  function fecharMenu() {
+    // garante que volte ao estado fechado (vertical + lista escondida)
+    if (!opcoesDeAcessibilidade.classList.contains('apresenta-lista')) {
+      opcoesDeAcessibilidade.classList.add('apresenta-lista');
+    }
+    if (!botaoDeAcessibilidade.classList.contains('rotacao-botao')) {
+      botaoDeAcessibilidade.classList.add('rotacao-botao');
+    }
+    botaoDeAcessibilidade.setAttribute('aria-expanded', 'false');
+    botaoDeAcessibilidade.setAttribute('aria-label', 'Abrir opções de acessibilidade');
+  }
+
+  botaoDeAcessibilidade.addEventListener('click', function (e) {
+    e.stopPropagation();
+    abrirFecharMenu();
+  });
+
+  // Melhoria: fechar ao clicar fora
   document.addEventListener('click', function (e) {
-    if (!container.contains(e.target)) {
-      botaoAcessibilidade.setAttribute('aria-expanded', 'false');
-      opcoes.hidden = true;
+    if (containerAcessibilidade && !containerAcessibilidade.contains(e.target)) {
+      fecharMenu();
     }
   });
 
-  // ESC fecha o menu
+  // Melhoria: ESC fecha o menu
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      botaoAcessibilidade.setAttribute('aria-expanded', 'false');
-      opcoes.hidden = true;
+      fecharMenu();
     }
   });
 });
