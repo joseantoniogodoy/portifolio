@@ -3,6 +3,10 @@
   --cor-principal:#00BFFF;
   --cor-secundaria: #009EFF;
   --cor-destaque: #9d00ff;
+
+--alto-contraste-fundo: #000000;
+--alto-contraste-texto: #ffffff;
+--alto-contraste-link: #ffd700;
 }
 
 body {
@@ -51,4 +55,77 @@ meu-footer a {
 .menu-acessibilidade button{
   min-width: 44px;
   min-height: 44px;
+}
+
+/* ===== Alto contraste (Aula 06) ===== */
+.alto-contraste{
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer{
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+}
+
+.alto-contraste a,
+.alto-contraste .nav-link{
+  color: var(--alto-contraste-link);
+}
+
+/* ===== Alto contraste: ajustes específicos do Portfólio ===== */
+.alto-contraste .card{
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+  border: 1px solid var(--alto-contraste-texto);
+}
+
+.alto-contraste .card .card-title,
+.alto-contraste .card .card-text{
+  color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .badge,
+.alto-contraste .bg-secondary{
+  background-color: var(--alto-contraste-link) !important;
+  color: var(--alto-contraste-fundo) !important;
+}
+
+/* Botões: melhora contraste e leitura */
+.alto-contraste .btn-primary{
+  background-color: var(--alto-contraste-link);
+  border-color: var(--alto-contraste-link);
+  color: var(--alto-contraste-fundo);
+}
+
+/* Modais (Bootstrap) */
+.alto-contraste .modal-content{
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+  border: 1px solid var(--alto-contraste-texto);
+}
+
+.alto-contraste .modal-header,
+.alto-contraste .modal-footer{
+  border-color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .btn-close{
+  filter: invert(1) grayscale(1);
+  opacity: 1;
+}
+
+/* Controles do carousel visíveis no alto contraste */
+.alto-contraste .carousel-control-prev-icon,
+.alto-contraste .carousel-control-next-icon{
+  filter: invert(1) grayscale(1);
+}
+
+/* Foco visível (teclado) */
+.alto-contraste a:focus-visible,
+.alto-contraste button:focus-visible,
+.alto-contraste .btn:focus-visible{
+  outline: 3px solid var(--alto-contraste-link);
+  outline-offset: 3px;
 }

@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const aumentaFonteBotao = document.getElementById('aumentar-fonte');
   const diminuiFonteBotao = document.getElementById('diminuir-fonte');
 
-  const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
+  
+  const alternaContraste = document.getElementById(\'alterna-contraste\');
+const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
   const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
   const containerAcessibilidade = document.getElementById('acessibilidade');
 
@@ -29,7 +31,21 @@ document.addEventListener('DOMContentLoaded', function () {
     tamanhoAtualFonte = Math.max(MIN, +(tamanhoAtualFonte - STEP).toFixed(2));
     document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
     salvarFonte();
-  });
+  });  // ===== Alto contraste (Aula 06) =====
+  if (alternaContraste) {
+    const CONTRASTE_KEY = 'altoContrasteAtivo';
+    const ativoSalvo = localStorage.getItem(CONTRASTE_KEY);
+    if (ativoSalvo === 'true') {
+      document.body.classList.add('alto-contraste');
+    }
+    alternaContraste.addEventListener('click', function (e) {
+      e.stopPropagation();
+      document.body.classList.toggle('alto-contraste');
+      localStorage.setItem(CONTRASTE_KEY, String(document.body.classList.contains('alto-contraste')));
+    });
+  }
+
+
 
   // ===== Menu (Aula 05): toggle de classes + aria-expanded =====
   function abrirFecharMenu() {
